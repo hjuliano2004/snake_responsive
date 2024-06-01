@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="snake.css">
+    <title>snake</title>
+</head>
+<body>
+
+    <section class="container">
+<header>
+    <h1>Snake</h1>
+<button class="disp1" onClick="display()">Play</button>
+</header>
+<img src="snk.png">
+</section>
+
+<main>
+
+    <div class="score">score: <span class="score--value">00</span></div>
+    <div class="menu-screen">
+        <span class="game-over">GAME OVER</span>
+        <span class="final-score">score: <span>00</span></span>
+        <button class="btn-play">jogar de novo</button>
+    </div>
+    <canvas width="600" height="600"></canvas>
+</main>
+
+<section class="section">
+    <div class="comp">
+    <button onClick="cima()"><i class="bi bi-arrow-up-square-fill"></i><svg xmlns="http://www.w3.org/2000/svg" 
+        width="50" height="50" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+        <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0
+         .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0"/>
+      </svg></button>
+</div>
+
+    <button onClick="esquerda()"><i class="bi bi-arrow-left-square-fill"><svg xmlns="http://www.w3.org/2000/svg" 
+        width="50" height="50" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+        <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5
+         0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1"/>
+      </svg></i></button>
+
+      
+    <button onClick="baixo()"><i class="bi bi-arrow-down-square-fill"><svg xmlns="http://www.w3.org/2000/svg" 
+        width="50" height="50" fill="currentColor" class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v5.793l2.146-2.147a.5.5
+         0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0"/>
+      </svg></i></button>
+
+
+    <button onclick="direita()"><i class="bi bi-arrow-right-square-fill"></i><svg xmlns="http://www.w3.org/2000/svg" 
+        width="50" height="50" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+        <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5
+         0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+      </svg></button>
+
+</section>
+
+<script src="snake.js"></script>
+</body>
+</html>
