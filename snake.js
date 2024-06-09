@@ -9,11 +9,10 @@ const buttonPlay = document.querySelector(".btn-play");
 var main = document.getElementsByTagName("main");
 const size = 30;
 var container = document.getElementsByClassName("container");
-var disp1 = document.getElementsByClassName("disp1");
-
-
+var vel = document.getElementById("vel");
 var sect = document.getElementsByClassName("section");
 var control = true;
+
 
 const desatControl = () =>{
     if(control == false){
@@ -35,6 +34,7 @@ direction = undefined;
 function display(){
     container[0].style.display ="none";
     main[0].style.display ="inline";
+    canvas.style.display ="inline";
     direction = undefined;
 
     snake = [
@@ -202,6 +202,25 @@ if(wallColision || selfColision){
     }
 
     //funcão da seleção de velocidade 
+    var velocidade = [300, 200, 100];
+    let c = 1;
+
+    function cliq(){
+        c++;
+
+        if(c == 1){
+            vel.innerHTML ="Normal";
+        }else{
+            if(c == 2){
+                vel.innerHTML ="Rápido";
+            }
+        }
+        if(c > 2){
+            c=0;
+        vel.innerHTML ="Lento";
+        }
+    }
+
 
 const gameLoop = () => {
     clearInterval(loopId)
@@ -218,7 +237,7 @@ const gameLoop = () => {
 
    loopId = setTimeout(() => {
         gameLoop()
-    },200);
+    },velocidade[c]);
 
 
 }
@@ -283,3 +302,15 @@ buttonPlay.addEventListener('click', () =>{
         {x: 330, y:240}
     ]
 })
+
+function mainMenu(){
+menu.style.display ="none";
+container[0].style.display ="grid";
+score.innerText = "00";
+
+snake = [
+    {x: 270, y:240},
+    {x: 300, y:240},
+    {x: 330, y:240}
+]
+}

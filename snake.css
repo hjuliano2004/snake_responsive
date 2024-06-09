@@ -67,7 +67,26 @@ body{
     cursor: pointer;
 }
 
+.btn-menu{
+    border:none;
+    border-radius: 100px;
+    padding: 10px 15px 10px 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color:#333;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+    cursor: pointer;
+}
+
 .btn-play:hover{
+    background-color: aqua;
+}
+
+.btn-menu:hover{
     background-color: aqua;
 }
 
@@ -126,8 +145,6 @@ svg{
     display:none;
 }
 
-
-
 @media (max-width: 6.3in){
     .section{
         display:inline;
@@ -162,6 +179,7 @@ svg{
         color:white;
         background-color: red;
     }
+
     h1{
         font-size: 250%;
         text-shadow: white 1px 1px 2px;
